@@ -94,7 +94,7 @@ function prompt_dave_setup {
 
   # Define prompts.
   PROMPT='%(?..%F{red}%B-> [%?]%b%f)%F{magenta}%n%f@%F{yellow}%m%f|%F{green}${_prompt_dave_pwd}%f${vcs_info_msg_0_} %F{blue}${_prompt_dave_symbol}%f '
-  RPROMPT='${editor_info[keymap]}'
+  #RPROMPT='${editor_info[keymap]}'
   SPROMPT='zsh: correct %F{magenta}%R%f to %F{green}%r%f [nyae]? '
 }
 
