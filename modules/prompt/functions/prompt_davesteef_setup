@@ -21,12 +21,6 @@ function +vi-set_vcs_prompt_symbol {
 }
 
 function prompt_steeef_precmd {
-  # Replace '/home/<user>' with '~'.
-  _prompt_steeef_pwd="${PWD/#$HOME/~}"
-  vcs_info
-}
-
-function prompt_steeef_precmd {
   # Check for untracked files or updated submodules since vcs_info does not.
   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
     branch_format="(${_prompt_steeef_colors[1]}%b%f%u%c${_prompt_steeef_colors[4]}●%f)"
@@ -36,6 +30,8 @@ function prompt_steeef_precmd {
 
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
 
+  # Replace '/home/<user>' with '~'.
+  _prompt_steeef_pwd="${PWD/#$HOME/~}"
   vcs_info 'prompt'
 
   if (( $+functions[python-info] )); then
@@ -100,8 +96,9 @@ function prompt_steeef_setup {
   zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
 
   # Define prompts.
-  PROMPT="%F{blue}|${_prompt_steeef_colors[3]}%n%f@${_prompt_steeef_colors[2]}%m%f%F{blue}| ``${_prompt_steeef_colors[5]}${_prompt_steeef_pwd}%f"'${vcs_info_msg_0_}'" $python_info[virtualenv]"
+  PROMPT='%(?..%F{red}%B-> [%?]%b%f)%F{blue}[${_prompt_steeef_colors[3]}%n%f@${_prompt_steeef_colors[2]}%m%f%F{blue}]${_prompt_steeef_colors[5]}${_prompt_steeef_pwd}%f ${vcs_info_msg_0_}$python_info[virtualenv]%F{blue}> '
   RPROMPT=''
+  SPROMPT='zsh: correct %F{magenta}%R%f to %F{green}%r%f [nyae]? '
 }
 
 prompt_steeef_setup "$@"
