@@ -26,4 +26,6 @@ function add_alias() {
 # Customize to your needs...
 export WORKON_HOME=$HOME/Software/.virtualenvs
 export PROJECT_HOME=$HOME/Software/git
+export EDITOR=vim
 source /usr/local/bin/virtualenvwrapper.sh
+setopt noclobber
