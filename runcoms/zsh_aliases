@@ -3,6 +3,7 @@ alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
 alias gfup="git fetch upstream"
+alias gm="git merge"
 
 # Docker aliases
 alias dkr="docker run"
