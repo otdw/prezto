@@ -1,0 +1,17 @@
+# git aliases
+alias ga="git add ."
+alias gc="git commit"
+alias gp="git push"
+alias gfup="git fetch upstream"
+
+# Docker aliases
+alias dkr="docker run"
+alias dkb="docker build"
+alias dkp="docker pull"
+alias dkps="docker ps -a"
+alias dki="docker images"
+
+
+# Modern tool aliases
+alias bat="batcat -p --paging never"
+alias ls="exa"

@@ -29,3 +29,11 @@ export PROJECT_HOME=$HOME/Software/git
 export EDITOR=vim
 source /usr/local/bin/virtualenvwrapper.sh
 setopt noclobber
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH:$HOME/go/bin:$HOME/.cargo/bin"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
