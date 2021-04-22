@@ -1,4 +1,8 @@
 *.zwc
 *.zwc.old
 modules/*/cache.zsh
+<<<<<<< HEAD
 *swp
+=======
+contrib
+>>>>>>> upstream/master
