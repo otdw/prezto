@@ -12,7 +12,10 @@ alias dkp="docker pull"
 alias dkps="docker ps -a"
 alias dki="docker images"
 
-
 # Modern tool aliases
 alias bat="batcat -p --paging never"
 alias ls="exa"
+
+# Python aliases
+alias ptpy="ptpython"
+alias bpy="bpython"
