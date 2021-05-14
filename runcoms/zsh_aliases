@@ -1,12 +1,20 @@
+# general aliases
+alias e="exit"
+
 # git aliases
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
+alias gpu="git pull"
+alias gf="git fetch"
 alias gfup="git fetch upstream"
 alias gm="git merge"
 
 # Docker aliases
+alias dk="docker"
+alias dke="docker exec"
 alias dkr="docker run"
+alias dkrm="docker rm"
 alias dkb="docker build"
 alias dkp="docker pull"
 alias dkps="docker ps -a"
@@ -19,3 +27,7 @@ alias ls="exa"
 # Python aliases
 alias ptpy="ptpython"
 alias bpy="bpython"
+
+# bbg aliases
+# alias bbvpn_proxy_activate="git config --global http.https://github.com.proxy $PROXY && export http_proxy=$PROXY && export https_proxy=$PROXY"
+# alias bbvpn_proxy_deactivate="git config --global --unset http.https://github.com.proxy $PROXY && unset http_proxy && unset https_proxy"

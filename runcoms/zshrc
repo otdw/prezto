@@ -39,9 +39,16 @@ eval "$(pyenv virtualenv-init -)"
 # if command -v pyenv 1>/dev/null 2>&1; then
 #   eval "$(pyenv init -)"
 # fi
- 
 
 # Customize to your needs...
 setopt noclobber
 export PATH="$PATH:$HOME/go/bin:$HOME/.cargo/bin"
 autoload -U +X bashcompinit && bashcompinit complete -o nospace -C /usr/bin/terraform terraform
+
+[[ -s "/home/dave/.gvm/scripts/gvm" ]] && source "/home/dave/.gvm/scripts/gvm"
+
+# setup golang version
+gvm use "go1.16.4"
+
+# BBVPN proxy address
+export PROXY=http://proxy.bloomberg.com:81
